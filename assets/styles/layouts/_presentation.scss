@@ -1,0 +1,126 @@
+.presentation,
+.projetAz {
+    max-width: 1400px;
+    margin: 100px auto;
+    @include childCenter;
+
+    @media screen and (max-width: 750px) {
+        margin: 25px auto;
+    }
+}
+
+
+.imgPresent,
+.textPresent,
+.imgProjetAz,
+.textProjetAz {
+    border-radius: 5px;
+    margin: 15px;
+    width: 80%;
+}
+
+.presentation {
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+    }
+
+
+    .imgPresent {
+        background: url(../img/workspace.png) center/cover;
+        height: 650px;
+        max-width: 60%;
+        background-color: $color1;
+
+        @media screen and (max-width: 1000px) {
+            width: 40%;
+        }
+
+        @media screen and (max-width: 750px) {
+            max-width: 100%;
+            width: 90%;
+        }
+    }
+
+    .textPresent {
+        height: 650px;
+        width: 40%;
+        padding: 20px;
+
+        @media screen and (max-width: 1000px) {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 750px) {
+            max-width: 100%;
+            width: 90%;
+            height: auto;
+        }
+
+        p {
+            text-align: justify;
+            margin-top: 20px;
+
+        }
+    }
+}
+
+.separation {
+    width: 100%;
+    height: 200px;
+    background: url(../img/separation.png);
+
+    h2 {
+        @include childCenter;
+        height: 100%;
+    }
+}
+
+.projetAz {
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+    }
+
+    .textProjetAz {
+        height: 650px;
+        width: 40%;
+        padding: 20px;
+
+        p {
+            text-align: justify;
+            margin-top: 40px;
+        }
+
+        li {
+            text-align: start;
+        }
+
+        @media screen and (max-width: 1000px) {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 750px) {
+            max-width: 100%;
+            width: 90%;
+            height: auto;
+        }
+
+    }
+
+    .imgProjetAz {
+        background: url(../img/exemleLogo.jpg) center/cover;
+        height: 650px;
+        max-width: 60%;
+        background-color: $color1;
+
+        @media screen and (max-width: 1000px) {
+            width: 40%;
+        }
+
+        @media screen and (max-width: 750px) {
+            max-width: 100%;
+            width: 90%;
+        }
+
+
+    }
+}

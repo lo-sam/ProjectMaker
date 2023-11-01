@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Cormorant";
+    src: url(../fonts/Cormorant-VariableFont_wght.ttf);
+}
+
+$font1: Cormorant,
+serif;
+$color1: #fff;
+$color1opa: rgba(80, 140, 180, 0.568);
+$color2: #000;
+$color3: rgb(135, 169, 243);
+
+@mixin childCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin alignChildren($space) {
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    text-align: center;
+    font-family: $font1;
+    background: $color2;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 2rem;
+    color: $color1;
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color1;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+}

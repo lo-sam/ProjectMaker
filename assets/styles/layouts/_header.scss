@@ -1,0 +1,142 @@
+header {
+    background: url(../img/bgAcc.jpg)center/cover;
+    height: 100vh;
+    width: 100%;
+
+    .header {
+        .navHeader {
+
+            max-width: 1400px;
+            margin: 20px auto;
+            display: flex;
+
+            @media screen and (max-width: 950px) {
+                margin: 5px auto;
+            }
+
+            @media screen and (max-width: 750px) {
+                flex-direction: column;
+            }
+
+            .titleNav {
+                width: 30%;
+                height: 100px;
+                @include childCenter;
+                justify-content: flex-start;
+
+                @media screen and (max-width: 950px) {
+                    visibility: hidden;
+                    width: 0;
+                    height: 0;
+                }
+            }
+
+            .menuNav {
+                height: 100px;
+                width: 50%;
+                display: flex;
+                margin: 0 10%;
+                font-size: 1.2rem;
+
+                @media screen and (max-width: 950px) {
+                    width: 100%;
+                    justify-content: flex-start;
+                    margin: 0;
+                }
+
+
+                ul {
+                    @include alignChildren(center);
+                    width: 100%;
+
+                    @media screen and (max-width: 950px) {
+                        justify-content: start;
+                    }
+
+                    @media screen and (max-width: 750px) {
+                        justify-content: center;
+                    }
+
+                    li {
+                        position: relative;
+                        margin: 0 15px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            bottom: -5px;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $color2;
+                        }
+
+                        &:hover::after {
+                            background-color: $color1;
+                            transition: 1.5s;
+                        }
+                    }
+                }
+            }
+
+
+            .social-network {
+                width: 20%;
+                display: flex;
+                height: 100px;
+                justify-content: end;
+
+                @media screen and (max-width: 950px) {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 750px) {
+                    justify-content: center;
+                }
+
+                ul {
+                    width: 100%;
+                    @include alignChildren(space-around);
+
+                    @media screen and (max-width: 950px) {
+                        width: 60%;
+                    }
+
+
+                    .facebook,
+                    .linkedin,
+                    .insta,
+                    .mail {
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            transition: all 330ms ease-in-out;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .headerTitle {
+            width: 100%;
+
+            img {
+                width: 80%;
+
+                @media screen and (max-width: 950px) {
+                    margin-top: 25vh;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

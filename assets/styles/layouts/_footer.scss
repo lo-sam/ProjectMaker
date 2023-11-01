@@ -1,0 +1,39 @@
+.social-network {
+    width: 50%;
+    display: flex;
+    height: 100px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 950px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+        justify-content: center;
+    }
+
+    ul {
+        width: 100%;
+        @include alignChildren(space-around);
+
+        @media screen and (max-width: 950px) {
+            width: 60%;
+        }
+
+
+        .facebook,
+        .linkedin,
+        .insta,
+        .mail {
+            img {
+                width: 20px;
+                height: 20px;
+                transition: all 330ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
