@@ -1,5 +1,6 @@
 header {
-    background: url(../img/bgAcc.jpg)center/cover;
+    background: $color2;
+    background-size: 100% 100vh;
     height: 100vh;
     width: 100%;
 
@@ -9,6 +10,7 @@ header {
             max-width: 1400px;
             margin: 20px auto;
             display: flex;
+            justify-content: center;
 
             @media screen and (max-width: 950px) {
                 margin: 5px auto;
@@ -18,18 +20,6 @@ header {
                 flex-direction: column;
             }
 
-            .titleNav {
-                width: 30%;
-                height: 100px;
-                @include childCenter;
-                justify-content: flex-start;
-
-                @media screen and (max-width: 950px) {
-                    visibility: hidden;
-                    width: 0;
-                    height: 0;
-                }
-            }
 
             .menuNav {
                 height: 100px;
@@ -37,6 +27,7 @@ header {
                 display: flex;
                 margin: 0 10%;
                 font-size: 1.2rem;
+                text-transform: uppercase;
 
                 @media screen and (max-width: 950px) {
                     width: 100%;
@@ -83,13 +74,27 @@ header {
                     }
                 }
             }
+        }
 
+
+        .headerTitle {
+            width: 80%;
+
+            img {
+                width: 50%;
+
+
+                @media screen and (max-width: 950px) {
+                    margin-top: 25vh;
+                    width: 100%;
+                }
+            }
 
             .social-network {
-                width: 20%;
+                width: 50%;
                 display: flex;
                 height: 100px;
-                justify-content: end;
+                justify-content: center;
 
                 @media screen and (max-width: 950px) {
                     width: 100%;
@@ -100,7 +105,8 @@ header {
                 }
 
                 ul {
-                    width: 100%;
+                    width: 80%;
+                    margin-left: 80px;
                     @include alignChildren(space-around);
 
                     @media screen and (max-width: 950px) {
@@ -113,8 +119,8 @@ header {
                     .insta,
                     .mail {
                         img {
-                            width: 20px;
-                            height: 20px;
+                            width: 50px;
+                            height: 50px;
                             transition: all 330ms ease-in-out;
 
                             &:hover {
@@ -124,19 +130,7 @@ header {
                     }
                 }
             }
-        }
 
-        .headerTitle {
-            width: 100%;
-
-            img {
-                width: 80%;
-
-                @media screen and (max-width: 950px) {
-                    margin-top: 25vh;
-                    width: 100%;
-                }
-            }
         }
     }
 }

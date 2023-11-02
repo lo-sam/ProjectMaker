@@ -34,7 +34,8 @@ body h2 {
 }
 
 header {
-  background: url(../img/bgAcc.jpg) center/cover;
+  background: #000;
+  background-size: 100% 100vh;
   height: 100vh;
   width: 100%;
 }
@@ -45,6 +46,9 @@ header .header .navHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 950px) {
@@ -62,31 +66,6 @@ header .header .navHeader {
   }
 }
 
-header .header .navHeader .titleNav {
-  width: 30%;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-@media screen and (max-width: 950px) {
-  header .header .navHeader .titleNav {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-}
-
 header .header .navHeader .menuNav {
   height: 100px;
   width: 50%;
@@ -95,6 +74,7 @@ header .header .navHeader .menuNav {
   display: flex;
   margin: 0 10%;
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 950px) {
@@ -162,33 +142,49 @@ header .header .navHeader .menuNav ul li:hover::after {
   transition: 1.5s;
 }
 
-header .header .navHeader .social-network {
-  width: 20%;
+header .header .headerTitle {
+  width: 80%;
+}
+
+header .header .headerTitle img {
+  width: 50%;
+}
+
+@media screen and (max-width: 950px) {
+  header .header .headerTitle img {
+    margin-top: 25vh;
+    width: 100%;
+  }
+}
+
+header .header .headerTitle .social-network {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 950px) {
-  header .header .navHeader .social-network {
+  header .header .headerTitle .social-network {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 750px) {
-  header .header .navHeader .social-network {
+  header .header .headerTitle .social-network {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 
-header .header .navHeader .social-network ul {
-  width: 100%;
+header .header .headerTitle .social-network ul {
+  width: 80%;
+  margin-left: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,42 +196,27 @@ header .header .navHeader .social-network ul {
 }
 
 @media screen and (max-width: 950px) {
-  header .header .navHeader .social-network ul {
+  header .header .headerTitle .social-network ul {
     width: 60%;
   }
 }
 
-header .header .navHeader .social-network ul .facebook img,
-header .header .navHeader .social-network ul .linkedin img,
-header .header .navHeader .social-network ul .insta img,
-header .header .navHeader .social-network ul .mail img {
-  width: 20px;
-  height: 20px;
+header .header .headerTitle .social-network ul .facebook img,
+header .header .headerTitle .social-network ul .linkedin img,
+header .header .headerTitle .social-network ul .insta img,
+header .header .headerTitle .social-network ul .mail img {
+  width: 50px;
+  height: 50px;
   -webkit-transition: all 330ms ease-in-out;
   transition: all 330ms ease-in-out;
 }
 
-header .header .navHeader .social-network ul .facebook img:hover,
-header .header .navHeader .social-network ul .linkedin img:hover,
-header .header .navHeader .social-network ul .insta img:hover,
-header .header .navHeader .social-network ul .mail img:hover {
+header .header .headerTitle .social-network ul .facebook img:hover,
+header .header .headerTitle .social-network ul .linkedin img:hover,
+header .header .headerTitle .social-network ul .insta img:hover,
+header .header .headerTitle .social-network ul .mail img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-header .header .headerTitle {
-  width: 100%;
-}
-
-header .header .headerTitle img {
-  width: 80%;
-}
-
-@media screen and (max-width: 950px) {
-  header .header .headerTitle img {
-    margin-top: 25vh;
-    width: 100%;
-  }
 }
 
 .social-network {
