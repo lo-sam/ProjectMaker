@@ -35,6 +35,10 @@ header {
                     margin: 0;
                 }
 
+                @media screen and (max-width: 400px) {
+                    justify-content: center;
+                }
+
 
                 ul {
                     @include alignChildren(center);
@@ -48,6 +52,10 @@ header {
                     li {
                         position: relative;
                         margin: 0 15px;
+
+                        @media screen and (max-width: 400px) {
+                            margin: 0 8px;
+                        }
 
                         &:hover {
                             cursor: pointer;
@@ -126,6 +134,10 @@ header {
 
                     @media screen and (max-width: 950px) {
                         width: 60%;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 80%;
                     }
 
 

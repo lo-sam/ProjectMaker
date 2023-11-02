@@ -87,6 +87,14 @@ header .header .navHeader .menuNav {
   }
 }
 
+@media screen and (max-width: 400px) {
+  header .header .navHeader .menuNav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 header .header .navHeader .menuNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,6 +119,12 @@ header .header .navHeader .menuNav ul {
 header .header .navHeader .menuNav ul li {
   position: relative;
   margin: 0 15px;
+}
+
+@media screen and (max-width: 400px) {
+  header .header .navHeader .menuNav ul li {
+    margin: 0 8px;
+  }
 }
 
 header .header .navHeader .menuNav ul li:hover {
@@ -215,6 +229,12 @@ header .header .headerTitle .social-network ul {
 @media screen and (max-width: 950px) {
   header .header .headerTitle .social-network ul {
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .header .headerTitle .social-network ul {
+    width: 80%;
   }
 }
 
