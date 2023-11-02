@@ -100,14 +100,6 @@ header .header .navHeader .menuNav ul {
   width: 100%;
 }
 
-@media screen and (max-width: 950px) {
-  header .header .navHeader .menuNav ul {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
 @media screen and (max-width: 750px) {
   header .header .navHeader .menuNav ul {
     -webkit-box-pack: center;
@@ -146,13 +138,32 @@ header .header .headerTitle {
   width: 80%;
 }
 
+@media screen and (max-width: 1400px) {
+  header .header .headerTitle {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header .header .headerTitle {
+    width: 100%;
+  }
+}
+
 header .header .headerTitle img {
   width: 50%;
 }
 
+@media screen and (max-width: 1400px) {
+  header .header .headerTitle img {
+    margin-top: 20vh;
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 950px) {
   header .header .headerTitle img {
-    margin-top: 25vh;
+    margin-top: 20vh;
     width: 100%;
   }
 }
@@ -193,6 +204,12 @@ header .header .headerTitle .social-network ul {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (max-width: 1400px) {
+  header .header .headerTitle .social-network ul {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 950px) {
