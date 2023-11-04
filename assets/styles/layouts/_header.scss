@@ -6,6 +6,40 @@ header {
 
     .header {
 
+        ////Menu Burger//////
+        @media screen and (max-width:750px) {
+            .navbar {
+                .navHeader {
+                    .menuNav {
+                        padding-top: 50px;
+                        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+                        height: 100vh;
+                        width: 100%;
+                        transform: translate(150%);
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: -40px;
+                        padding-right: 25%;
+                        transition: transform 0.5s ease-in-out;
+                        text-align: center;
+                    }
+
+                    .menuNav ul {
+                        margin-left: auto;
+                    }
+
+                    .menuNav ul li {
+
+                        margin-bottom: 1.2rem;
+                        font-size: 2.5rem;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+
+        }
+
         .navHeader {
             max-width: 1400px;
             margin: 20px auto;
@@ -14,10 +48,6 @@ header {
 
             @media screen and (max-width: 950px) {
                 margin: 5px auto;
-            }
-
-            @media screen and (max-width: 750px) {
-                flex-direction: column;
             }
 
 
@@ -35,23 +65,26 @@ header {
                     margin: 0;
                 }
 
-                @media screen and (max-width: 400px) {
-                    justify-content: center;
-                }
-
-
                 ul {
                     @include alignChildren(center);
                     width: 100%;
 
 
                     @media screen and (max-width: 750px) {
-                        justify-content: center;
+                        flex-direction: column;
+                        height: 30vh;
+                        width: 50%;
                     }
 
                     li {
                         position: relative;
                         margin: 0 15px;
+
+                        @media screen and (max-width: 750px) {
+                            height: 30vh;
+                            display: flex;
+                            align-items: center;
+                        }
 
                         @media screen and (max-width: 400px) {
                             margin: 0 8px;
@@ -70,6 +103,10 @@ header {
                             width: 100%;
                             height: 2px;
                             opacity: 1;
+
+                            @media screen and (max-width: 750px) {
+                                display: none;
+                            }
                         }
 
                         &:hover::after {
@@ -79,7 +116,84 @@ header {
                     }
                 }
             }
+
         }
+
+        ///BURGER////
+
+        .nav-container {
+            @media screen and (max-width: 750px) {
+                display: block;
+                position: relative;
+                height: 60px;
+
+                .checkbox {
+                    position: absolute;
+                    display: block;
+                    height: 32px;
+                    width: 32px;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 5;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                .hamburger-lines {
+                    display: block;
+                    height: 26px;
+                    width: 32px;
+                    position: absolute;
+                    top: 35px;
+                    right: 20px;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .hamburger-lines .line {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: $color1;
+                }
+
+                .hamburger-lines .line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                .hamburger-lines .line2 {
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                .hamburger-lines .line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+
+                input[type="checkbox"]:checked~.menuNav {
+                    transform: translateX(0);
+                }
+
+                input[type="checkbox"]:checked~.hamburger-lines .line1 {
+                    transform: rotate(45deg);
+                }
+
+                input[type="checkbox"]:checked~.hamburger-lines .line2 {
+                    transform: scaleY(0);
+                }
+
+                input[type="checkbox"]:checked~.hamburger-lines .line3 {
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+
 
 
         .headerTitle {

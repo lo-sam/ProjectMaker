@@ -39,6 +39,40 @@ header {
   background: url(../img/bgAcc.jpg) center/cover;
 }
 
+@media screen and (max-width: 750px) {
+  header .header .navbar .navHeader .menuNav {
+    padding-top: 50px;
+    -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    -webkit-transform: translate(150%);
+            transform: translate(150%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: -40px;
+    padding-right: 25%;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  header .header .navbar .navHeader .menuNav ul {
+    margin-left: auto;
+  }
+  header .header .navbar .navHeader .menuNav ul li {
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
+
 header .header .navHeader {
   max-width: 1400px;
   margin: 20px auto;
@@ -53,15 +87,6 @@ header .header .navHeader {
 @media screen and (max-width: 950px) {
   header .header .navHeader {
     margin: 5px auto;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  header .header .navHeader {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -86,14 +111,6 @@ header .header .navHeader .menuNav {
   }
 }
 
-@media screen and (max-width: 400px) {
-  header .header .navHeader .menuNav {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 header .header .navHeader .menuNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,15 +126,30 @@ header .header .navHeader .menuNav ul {
 
 @media screen and (max-width: 750px) {
   header .header .navHeader .menuNav ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30vh;
+    width: 50%;
   }
 }
 
 header .header .navHeader .menuNav ul li {
   position: relative;
   margin: 0 15px;
+}
+
+@media screen and (max-width: 750px) {
+  header .header .navHeader .menuNav ul li {
+    height: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -141,10 +173,99 @@ header .header .navHeader .menuNav ul li::after {
   opacity: 1;
 }
 
+@media screen and (max-width: 750px) {
+  header .header .navHeader .menuNav ul li::after {
+    display: none;
+  }
+}
+
 header .header .navHeader .menuNav ul li:hover::after {
   background-color: #fff;
   -webkit-transition: 1.5s;
   transition: 1.5s;
+}
+
+@media screen and (max-width: 750px) {
+  header .header .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  header .header .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  header .header .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .header .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+  }
+  header .header .nav-container .hamburger-lines .line1 {
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  }
+  header .header .nav-container .hamburger-lines .line2 {
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+  header .header .nav-container .hamburger-lines .line3 {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  }
+  header .header .nav-container input[type="checkbox"]:checked ~ .menuNav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  header .header .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .header .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  header .header .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 
 header .header .headerTitle {
