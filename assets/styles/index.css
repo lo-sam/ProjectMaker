@@ -39,6 +39,10 @@ header {
   background: url(../img/bgAcc.jpg) center/cover;
 }
 
+header .header .nav-container input {
+  display: none;
+}
+
 @media screen and (max-width: 750px) {
   header .header .navbar .navHeader .menuNav {
     padding-top: 50px;
@@ -74,7 +78,6 @@ header {
 }
 
 header .header .navHeader {
-  max-width: 1400px;
   margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +348,7 @@ header .header .headerTitle .social-network ul .mail img {
   transition: all 330ms ease-in-out;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   header .header .headerTitle .social-network ul .facebook img,
   header .header .headerTitle .social-network ul .linkedin img,
   header .header .headerTitle .social-network ul .insta img,
